@@ -90,28 +90,41 @@ tbody td img{
 .table {
     
     width: 100%;
-    max-height: 350px;
+    max-height: 400px;
     margin-top: 8rem;
     border: 1.5px solid var(--blue-gray);
-    border-radius: 1.4rem;  
+    border-radius: 1.4rem;
     overflow-y: scroll;
 }
 
+.table::-webkit-scrollbar{
+    width: 1rem;
+}
+
+.table::-webkit-scrollbar-button{
+    display: none;
+}
+
+
+.table::-webkit-scrollbar-thumb{
+    background-color:var(--light-blue);
+    border-top-right-radius: 1.8rem;
+    border-bottom-right-radius: 1.8rem;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1.4rem;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 tbody {
     position: relative;
 }
-
-table {
-    width: 100%;
-    
-    border-collapse: collapse;
-    border-radius: 1.4rem;
-    font-size: 1.4rem;
-    
-    
-}
-
 
 
 thead th{
@@ -123,10 +136,6 @@ thead th{
 
 thead th:first-child{
    border-top-left-radius: 1.4rem;
-}
-
-thead th:last-child{
-    border-top-right-radius: 1.4rem ;
 }
 
 tbody td{
@@ -154,10 +163,6 @@ tbody tr:nth-child(even) td {
 
 tbody tr:last-child td:first-child {
     border-bottom-left-radius: 1.4rem;
-}
-
-tbody tr:last-child td:last-child {
-    border-bottom-right-radius: 1.4rem;
 }
 
 td button {
